@@ -17,20 +17,20 @@ public class Player : MonoBehaviour
 
         if (inputLR > 0)
         {
-            transform.Translate(0.05f, 0, 0);
+            transform.Translate(0.1f, 0, 0);
         }
         else if (inputLR < 0)
         {
-            transform.Translate(-0.05f, 0, 0);
+            transform.Translate(-0.1f, 0, 0);
         }
 
         if (inputUD > 0)
         {
-            transform.Translate(0, 0.05f, 0);
+            transform.Translate(0, 0.1f, 0);
         }
         else if (inputUD < 0)
         {
-            transform.Translate(0, -0.05f, 0);
+            transform.Translate(0, -0.1f, 0);
         }
     }
 }
