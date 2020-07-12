@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject bullet;
+
     protected int hp
     {
         get
@@ -32,5 +34,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
+    }
+    void Fire() {
+        Vector3 bulletPosition = transform.position;
+        Instantiate(bullet, bulletPosition, Quaternion.identity);
     }
 }
