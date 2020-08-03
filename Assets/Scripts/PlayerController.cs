@@ -6,10 +6,28 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject bullet;
 
+    protected int hp
+    {
+        get
+        {
+            return _hp;
+        }
+        set
+        {
+            _hp = value;
+            if(hp <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
+    private int _hp;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        hp = 10;
     }
 
     // Update is called once per frame
@@ -47,5 +65,10 @@ public class PlayerController : MonoBehaviour
             bulletPosition.x += 1f;
             Instantiate(bullet, bulletPosition, Quaternion.identity);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll) {
+        hp--;
+        Destroy (coll.gameObject);
     }
 }

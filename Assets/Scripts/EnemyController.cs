@@ -8,12 +8,12 @@ public class EnemyController : Enemy
     void Start()
     {
         hp = 100;
-        InvokeRepeating("Fire", 1, 0.1f);
+        InvokeRepeating("Fire", 1, 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(hp);
+
     }
 }

@@ -39,4 +39,11 @@ public class Enemy : MonoBehaviour
         Vector3 bulletPosition = transform.position;
         Instantiate(bullet, bulletPosition, Quaternion.identity);
     }
+
+    void OnTriggerEnter2D(Collider2D coll) {
+        if (coll.gameObject.name == "bullet(Clone)") {
+            hp--;
+            Destroy (coll.gameObject);
+        }
+    }
 }

@@ -13,8 +13,9 @@ public class EnemyBulletJikinerai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject player = GameObject.FindWithTag("Player");
         startPoint = transform.position;
-        target = GameObject.Find("player").transform.position;
+        target = player.transform.position;
         float distanceX = target.x - transform.position.x;
         float distanceY = target.y - transform.position.y;
         float distance = (float)Math.Sqrt(distanceX * distanceX + distanceY * distanceY);
