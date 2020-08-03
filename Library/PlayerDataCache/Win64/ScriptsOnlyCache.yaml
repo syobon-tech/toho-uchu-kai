@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - EnemyController
     - GameMaster
     - PlayerController
+    - PointController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -47,11 +48,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 12540}
     - Class: 114
-      Script: {instanceID: 15396}
+      Script: {instanceID: 12906}
+    - Class: 114
+      Script: {instanceID: 14770}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -221,13 +224,13 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 2c50ba461c9b78ac09e8e0d20ae8b30d
+      Hash: 1704abc28e8d8d2fb34c661f4b84b601
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyBulletJikinerai
@@ -269,7 +272,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 2c50ba461c9b78ac09e8e0d20ae8b30d
+      Hash: b4b79925a6607c908b8b60c648fed724
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -281,7 +284,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 2c50ba461c9b78ac09e8e0d20ae8b30d
+      Hash: a6e54c549bf944fbdebe0287754a0297
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -305,7 +308,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BulletController
@@ -375,6 +378,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: e17cf1542ca053a6060b8386258b8b01
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameMaster
   - hash:
       serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
@@ -485,11 +494,11 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 2894591b39ffd4d217c46b320e0c6718
+      Hash: 9baac2993e4558083acb483b6f55748f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GameMaster
+    className: PointController
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "F:/toho-uchu-kai/bin/a1.0.4/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/bin/a1.0.5/\u6771\u65B9\u5B87\u5B99\u58CA.exe"

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7381441794624016081}
   m_Layer: 0
   m_Name: enemybullet_jikinerai
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38f3bd4b0bbbbf48a2dbe6ae724dcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7493696987983838519, guid: 9d5b29ce12a619b44b1800ce865cdb24, type: 3}
+  speed: 0.1
 --- !u!58 &-643707205794269461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38f3bd4b0bbbbf48a2dbe6ae724dcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  speed: 0.1

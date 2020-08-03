@@ -5,7 +5,7 @@ using System;
 
 public class EnemyBulletJikinerai : MonoBehaviour
 {
-    Vector3 startPoint;
+    public float speed;
     Vector3 target;
     float speedX;
     float speedY;
@@ -14,14 +14,13 @@ public class EnemyBulletJikinerai : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        startPoint = transform.position;
         target = player.transform.position;
         float distanceX = target.x - transform.position.x;
         float distanceY = target.y - transform.position.y;
         float distance = (float)Math.Sqrt(distanceX * distanceX + distanceY * distanceY);
-        float speed = distance / 0.1f;
-        speedX = distanceX / speed;
-        speedY = distanceY / speed;
+        float velocity = distance / speed;
+        speedX = distanceX / velocity;
+        speedY = distanceY / velocity;
     }
 
     // Update is called once per frame

@@ -95,7 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb7cb4ed9f08e4fac992a985cf27d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 100
   bullet: {fileID: 2199821807832936924, guid: fb2980f91ffddea4ba1c7bcd73422e92, type: 3}
+  point: {fileID: 837489607482687037, guid: 7ea81351a6f72e94d82e7e547cdd5921, type: 3}
+  fireInterval: 0.5
 --- !u!58 &5187332497480954430
 CircleCollider2D:
   m_ObjectHideFlags: 0

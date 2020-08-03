@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    public int maxHp;
     public GameObject bullet;
+    public int score = 0;
 
     protected int hp
     {
@@ -27,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hp = 10;
+        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -68,7 +71,14 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
-        hp--;
+        if (coll.gameObject.tag == "EnemyBullet")
+        {
+            hp--;
+        }
+        else if (coll.gameObject.tag == "Point")
+        {
+            GameObject.Find ("Canvas").GetComponent<UIController> ().AddScore ();
+        }
         Destroy (coll.gameObject);
     }
 }

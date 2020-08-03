@@ -6,11 +6,12 @@ public class GameMaster : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject player;
+    public float generateEnemyInterval;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("GenerateEnemy", 1, 10f);
+        InvokeRepeating("GenerateEnemy", 1, generateEnemyInterval);
     }
 
     // Update is called once per frame

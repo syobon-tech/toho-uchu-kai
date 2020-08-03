@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int maxHp;
     public GameObject bullet;
+    public GameObject point;
 
     protected int hp
     {
@@ -18,6 +20,7 @@ public class Enemy : MonoBehaviour
             if(hp <= 0)
             {
                 Destroy(this.gameObject);
+                Instantiate(point, transform.position, Quaternion.identity);
             }
         }
     }
@@ -27,7 +30,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -36,8 +39,7 @@ public class Enemy : MonoBehaviour
 
     }
     void Fire() {
-        Vector3 bulletPosition = transform.position;
-        Instantiate(bullet, bulletPosition, Quaternion.identity);
+        Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
