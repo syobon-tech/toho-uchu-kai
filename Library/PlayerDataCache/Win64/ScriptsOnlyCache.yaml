@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - BulletController
     - EnemyBulletJikinerai
     - EnemyController
+    - FramerateCalucrator
     - GameMaster
     - PlayerController
     - PointController
@@ -50,29 +51,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 11510}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11962}
-    - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 11968}
     - Class: 114
       Script: {instanceID: 11982}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12322}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 13176}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13182}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13672}
+    - Class: 114
+      Script: {instanceID: 14092}
+    - Class: 114
+      Script: {instanceID: 14174}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -524,7 +527,13 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 4ce15e99c635d2567873d27549d1f16f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FramerateCalucrator
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "F:/toho-uchu-kai/bin/a1.0.5/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/a1.0.5.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
