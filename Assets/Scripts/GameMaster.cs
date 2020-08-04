@@ -8,6 +8,10 @@ public class GameMaster : MonoBehaviour
     public GameObject player;
     public float generateEnemyInterval;
 
+    void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     // Start is called before the first frame update
     void Start()
     {
