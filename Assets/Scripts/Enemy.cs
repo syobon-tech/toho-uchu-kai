@@ -17,11 +17,6 @@ public class Enemy : MonoBehaviour
         set
         {
             _hp = value;
-            if(hp <= 0)
-            {
-                Destroy(this.gameObject);
-                Instantiate(point, transform.position, Quaternion.identity);
-            }
         }
     }
 
@@ -36,16 +31,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(hp <= 0)
+        {
+            Instantiate(point, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
     }
     void Fire() {
         Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.name == "bullet(Clone)") {
+        if (coll.gameObject.tag == "PlayerBullet") {
             hp--;
-            Destroy (coll.gameObject);
+            Destroy(coll.gameObject);
         }
     }
 }

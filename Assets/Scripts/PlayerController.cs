@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     public int maxHp;
     public GameObject bullet;
-    public int score = 0;
+    public Text text;
+    int score = 0;
 
     protected int hp
     {
@@ -68,6 +70,9 @@ public class PlayerController : MonoBehaviour
             bulletPosition.x += 1f;
             Instantiate(bullet, bulletPosition, Quaternion.identity);
         }
+
+        text.text = score.ToString();
+        Debug.Log(score);
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
@@ -77,7 +82,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (coll.gameObject.tag == "Point")
         {
-            GameObject.Find ("Canvas").GetComponent<UIController> ().AddScore ();
+            score += 100;
         }
         Destroy (coll.gameObject);
     }

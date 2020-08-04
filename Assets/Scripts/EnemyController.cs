@@ -11,10 +11,4 @@ public class EnemyController : Enemy
         hp = 100;
         InvokeRepeating("Fire", 1, fireInterval);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

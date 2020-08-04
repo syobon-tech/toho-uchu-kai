@@ -43,7 +43,6 @@
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PointController.cs" />
-     <Compile Include="Assets\Scripts\UIController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
