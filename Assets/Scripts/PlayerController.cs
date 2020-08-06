@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public int maxHp;
     public GameObject bullet;
-    public Text text;
+    public Text scoreText;
+    public Text hpText;
+    public Text enemyCountText;
     int score = 0;
 
     protected int hp
@@ -71,8 +73,11 @@ public class PlayerController : MonoBehaviour
             Instantiate(bullet, bulletPosition, Quaternion.identity);
         }
 
-        text.text = score.ToString();
-        Debug.Log(score);
+        scoreText.text = score.ToString();
+        hpText.text = hp.ToString();
+
+        GameObject[] tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
+        enemyCountText.text = (tagObjects.Length).ToString();
     }
 
     void OnTriggerEnter2D(Collider2D coll) {

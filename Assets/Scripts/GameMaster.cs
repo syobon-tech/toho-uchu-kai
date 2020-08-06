@@ -28,7 +28,7 @@ public class GameMaster : MonoBehaviour
     }
 
     void GenerateEnemy() {
-        Vector3 enemyPosition = new Vector3(-7f + 5 * Random.value, 2.0f, 3.0f);
+        Vector3 enemyPosition = new Vector3(-8f + 8 * Random.value, 2.0f, 3.0f);
         Instantiate(enemy, enemyPosition, Quaternion.identity);
     }
 }
