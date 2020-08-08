@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
             _hp = value;
             if(hp <= 0)
             {
+                hp = 0;
                 Destroy(this.gameObject);
             }
         }
