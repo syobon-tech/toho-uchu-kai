@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject enemy_a;
+    public GameObject enemy_b;
     public GameObject player;
     public float generateEnemyInterval;
 
@@ -29,6 +30,11 @@ public class GameMaster : MonoBehaviour
 
     void GenerateEnemy() {
         Vector3 enemyPosition = new Vector3(-8f + 8 * Random.value, 2.0f, 3.0f);
-        Instantiate(enemy, enemyPosition, Quaternion.identity);
+        Random.InitState(Random.Range(0,100));
+        if (Random.Range(0, 21) <= 10) {
+            Instantiate(enemy_a, enemyPosition, Quaternion.identity);
+        }else {
+            Instantiate(enemy_b, enemyPosition, Quaternion.identity);
+        }
     }
 }

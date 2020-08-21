@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,10 +24,11 @@ public class PlayerController : MonoBehaviour
         set
         {
             _hp = value;
-            if(hp <= 0)
+            if(_hp <= 0)
             {
-                hp = 0;
-                Destroy(this.gameObject);
+                _hp = 0;
+                Destroy(gameObject);
+                SceneManager.LoadScene("GameOver");
             }
         }
     }
