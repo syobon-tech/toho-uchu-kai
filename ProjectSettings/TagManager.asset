@@ -45,3 +45,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlayerBullet
+    uniqueID: 3322958995
+    locked: 0
+  - name: EnemyBullet
+    uniqueID: 1511333201
+    locked: 0
+  - name: Player
+    uniqueID: 1360214673
+    locked: 0
+  - name: Enemy
+    uniqueID: 793502221
+    locked: 0
+  - name: Point
+    uniqueID: 2376466679
+    locked: 0
