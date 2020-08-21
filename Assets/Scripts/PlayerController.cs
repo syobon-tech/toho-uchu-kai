@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,10 +10,12 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     public int maxHp;
+    public int level;
     public GameObject bullet;
     public Text scoreText;
     public Text hpText;
     public Text enemyCountText;
+    public Text levelText;
     int score = 0;
 
     protected int hp
@@ -77,8 +80,13 @@ public class PlayerController : MonoBehaviour
             Instantiate(bullet, bulletPosition, Quaternion.identity);
         }
 
+        // Change Level
+        double level_d = score / 1000;
+        level = (int)Math.Floor(level_d) + 1;
+        levelText.text = "Level: " + level.ToString();
         scoreText.text = score.ToString();
         hpText.text = hp.ToString();
+
 
         GameObject[] tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCountText.text = (tagObjects.Length).ToString();

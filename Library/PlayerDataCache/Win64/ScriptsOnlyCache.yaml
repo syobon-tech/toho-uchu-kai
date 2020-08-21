@@ -82,8 +82,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14422}
     - Class: 114
       Script: {instanceID: 15056}
-    - Class: 114
-      Script: {instanceID: 15454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -469,7 +467,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 67f6134998bf1a92f17a411683f34999
+      Hash: d5e56c58615dae2dc5cc6bf51ca4a762
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -583,7 +581,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 5738627d18bba860927519d4fbb338db
+      Hash: 03e72ec4d126a8897293c5d12138121f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMaster
@@ -748,4 +746,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/b1.0.0.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/b1.0.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
