@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Enemy_a : Enemy
 {
-    public float fireInterval;
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
-        hp = 100;
+        base.Start();
         InvokeRepeating("Fire_a", 1, fireInterval);
     }
 }

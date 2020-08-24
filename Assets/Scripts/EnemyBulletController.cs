@@ -10,7 +10,10 @@ public class EnemyBulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject player = GameObject.FindWithTag("Player");
+        PlayerController script = player.GetComponent<PlayerController>();
+        int level = script.level;
+        speed /= (float)Math.Sqrt(level);
     }
 
     // Update is called once per frame

@@ -8,15 +8,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static int score;
+    public static int GetScore(){
+        return score;
+    }
+
+    int bestScore;
     [SerializeField]
     public int maxHp;
     public int level;
+    public float shotInterval;
     public GameObject bullet;
     public Text scoreText;
+    public Text bestScoreText;
     public Text hpText;
     public Text enemyCountText;
     public Text levelText;
-    int score = 0;
+    float shotTimer;
 
     protected int hp
     {
@@ -41,7 +49,30 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hp = maxHp;
+        int difficulty = DifficultySelector.GetDifficulty();
+        switch (difficulty) {
+            case 0:
+                hp = maxHp;
+                bestScore = PlayerPrefs.GetInt("easyBestScore", 0);
+                break;
+
+            case 1:
+                hp = maxHp / 2;
+                bestScore = PlayerPrefs.GetInt("hardBestScore", 0);
+                break;
+
+            case 2:
+                hp = 1;
+                bestScore = PlayerPrefs.GetInt("owataBestScore", 0);
+                break;
+
+            default:
+                hp = maxHp;
+                bestScore = 0;
+                break;
+        }
+        bestScoreText.text = bestScore.ToString();
+        score = 0;
     }
 
     // Update is called once per frame
@@ -70,14 +101,22 @@ public class PlayerController : MonoBehaviour
 
         // Fire
         if (Input.GetAxisRaw("Fire1") == 1) {
-            Vector3 bulletPosition = transform.position;
-            bulletPosition.y += 0.5f;
-            Instantiate(bullet, bulletPosition, Quaternion.identity);
-            bulletPosition.y -= 0.5f;
-            bulletPosition.x -= 0.5f;
-            Instantiate(bullet, bulletPosition, Quaternion.identity);
-            bulletPosition.x += 1f;
-            Instantiate(bullet, bulletPosition, Quaternion.identity);
+            if (shotTimer == 0) {
+                Vector3 bulletPosition = transform.position;
+                bulletPosition.y += 0.5f;
+                Instantiate(bullet, bulletPosition, Quaternion.identity);
+                bulletPosition.y -= 0.2f;
+                bulletPosition.x -= 0.5f;
+                Instantiate(bullet, bulletPosition, Quaternion.identity);
+                bulletPosition.x += 1f;
+                Instantiate(bullet, bulletPosition, Quaternion.identity);
+            }
+            shotTimer += Time.deltaTime;
+            if (shotTimer >= shotInterval) {
+                shotTimer = 0;
+            }
+        } else {
+            shotTimer = 0;
         }
 
         // Change Level

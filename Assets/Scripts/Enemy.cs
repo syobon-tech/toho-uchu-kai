@@ -5,8 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int maxHp;
+    public float fireInterval;
     public GameObject bullet;
     public GameObject point;
+    protected GameObject player;
+    PlayerController script;
 
     protected int hp
     {
@@ -23,9 +26,13 @@ public class Enemy : MonoBehaviour
     private int _hp;
 
     // Start is called before the first frame update
-    void Start()
+    virtual protected void Start()
     {
         hp = maxHp;
+        player = GameObject.FindWithTag("Player");
+        script = player.GetComponent<PlayerController>();
+        int level = script.level;
+        fireInterval *= (level - 1)/2 + 1;
     }
 
     // Update is called once per frame
@@ -38,7 +45,7 @@ public class Enemy : MonoBehaviour
         }
     }
     void Fire_a() {
-        GameObject player = GameObject.FindWithTag("Player");
+
         Vector3 vector = (player.transform.position - transform.position).normalized;
         vector.z = 0;
         Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, vector));

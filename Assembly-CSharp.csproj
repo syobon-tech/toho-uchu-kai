@@ -48,6 +48,8 @@
      <Compile Include="Assets\Scripts\FramerateCalucrator.cs" />
      <Compile Include="Assets\Scripts\SceneSelector.cs" />
      <Compile Include="Assets\Scripts\Reseter.cs" />
+     <Compile Include="Assets\Scripts\DifficultySelector.cs" />
+     <Compile Include="Assets\Scripts\BestScoreSaver.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

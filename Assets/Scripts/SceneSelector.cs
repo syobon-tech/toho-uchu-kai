@@ -16,7 +16,7 @@ public class SceneSelector : MonoBehaviour
     {
         float input = Input.GetAxisRaw("Submit");
         if (input >= 1) {
-            SceneManager.LoadScene("Arcade");
+            SceneManager.LoadScene("SelectDifficulty");
         }
     }
 }

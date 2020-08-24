@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8620969d686714d98a75d877ecd024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  maxHp: 30
+  fireInterval: 0.5
   bullet: {fileID: 2199821807832936924, guid: fb2980f91ffddea4ba1c7bcd73422e92, type: 3}
   point: {fileID: 837489607482687037, guid: 7ea81351a6f72e94d82e7e547cdd5921, type: 3}
-  fireInterval: 0.5
+  player: {fileID: 0}
 --- !u!1001 &1285093256570567154
 PrefabInstance:
   m_ObjectHideFlags: 0
