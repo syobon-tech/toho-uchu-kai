@@ -25,7 +25,7 @@ public class BestScoreSaver : MonoBehaviour
                 bestScore = PlayerPrefs.GetInt("hardBestScore", 0);
                 if (score > bestScore) {
                     newBestText.SetActive(true);
-                    PlayerPrefs.SetInt("easyBestScore", score);
+                    PlayerPrefs.SetInt("hardBestScore", score);
                     PlayerPrefs.Save();
                 }
                 break;
@@ -34,7 +34,7 @@ public class BestScoreSaver : MonoBehaviour
                 bestScore = PlayerPrefs.GetInt("owataBestScore", 0);
                 if (score > bestScore) {
                     newBestText.SetActive(true);
-                    PlayerPrefs.SetInt("easyBestScore", score);
+                    PlayerPrefs.SetInt("owataBestScore", score);
                     PlayerPrefs.Save();
                 }
                 break;
