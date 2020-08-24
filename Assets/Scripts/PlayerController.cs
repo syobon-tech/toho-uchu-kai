@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public int maxHp;
     public int level;
     public float shotInterval;
+    public float scoreWithTimeInterval;
     public GameObject bullet;
     public Text scoreText;
     public Text bestScoreText;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Text enemyCountText;
     public Text levelText;
     float shotTimer;
+    float scoreTimer;
 
     protected int hp
     {
@@ -121,12 +123,35 @@ public class PlayerController : MonoBehaviour
 
         // Change Level
         double level_d = score / 1000;
-        level = (int)Math.Floor(level_d) + 1;
-        levelText.text = "Level: " + level.ToString();
+        int difficulty = DifficultySelector.GetDifficulty();
+        switch (difficulty) {
+            case 0:
+                level = (int)Math.Floor(level_d) + 1;
+                break;
+
+            case 1:
+                level = (int)Math.Floor(level_d) + 3;
+                break;
+
+            case 2:
+                level = (int)Math.Floor(level_d) + 5;
+                break;
+
+            default:
+                level = (int)Math.Floor(level_d) + 1;
+                break;
+        }
+        levelText.text = "Level: " + ((int)Math.Floor(level_d) + 1).ToString();
+
+        // Scoreing
+        scoreTimer += Time.deltaTime;
+        if (scoreTimer >= scoreWithTimeInterval) {
+            score += (int)Math.Floor(level_d) + 1;
+            scoreTimer = 0;
+        }
         scoreText.text = score.ToString();
+
         hpText.text = hp.ToString();
-
-
         GameObject[] tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCountText.text = (tagObjects.Length).ToString();
     }

@@ -536,7 +536,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: d29f3060bf38fe1dc92aac9d84229fd5
+      Hash: 6adf23ff0ec3f83619d61611b40f27c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -816,4 +816,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SelectDifficulty.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/b1.0.2.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/b1.0.3/\u6771\u65B9\u5B87\u5B99\u58CA.exe"

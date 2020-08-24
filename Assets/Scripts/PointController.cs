@@ -20,7 +20,7 @@ public class PointController : MonoBehaviour
         transform.Translate(0, -speed, 0);
 
         GameObject player = GameObject.FindWithTag("Player");
-        if (Math.Abs(transform.position.x - player.transform.position.x) <= magnetPower && Math.Abs(transform.position.y - player.transform.position.y) <= magnetPower && transform.position.y > player.transform.position.y)
+        if (Math.Abs(transform.position.x - player.transform.position.x) <= magnetPower && Math.Abs(transform.position.y - player.transform.position.y) <= magnetPower && transform.position.y > player.transform.position.y && player != null)
         {
             if (Math.Abs(transform.position.x - player.transform.position.x) > speed)
             {

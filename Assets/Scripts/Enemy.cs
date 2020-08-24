@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         script = player.GetComponent<PlayerController>();
         int level = script.level;
-        fireInterval *= (level - 1)/2 + 1;
+        fireInterval *= (float)Math.Sqrt(level + 4) / 2;
     }
 
     // Update is called once per frame

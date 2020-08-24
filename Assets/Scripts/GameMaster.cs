@@ -34,7 +34,7 @@ public class GameMaster : MonoBehaviour
         if (level_saved < script.level) {
             level_saved = script.level;
             CancelInvoke();
-            InvokeRepeating("GenerateEnemy", 1, generateEnemyInterval / (float)Math.Sqrt(level_saved));
+            InvokeRepeating("GenerateEnemy", 1, generateEnemyInterval / (float)Math.Sqrt(Math.Sqrt(level_saved)));
         }
     }
 
