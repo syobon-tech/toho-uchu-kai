@@ -816,4 +816,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SelectDifficulty.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/b1.0.3/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/b1.0.3.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
