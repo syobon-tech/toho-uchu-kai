@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     int bestScore;
     [SerializeField]
-    public int maxHp;
+    public int maxHp = 20;
     public int level;
     public float shotInterval;
     public float scoreWithTimeInterval;
@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
         string scorefile = "";
         switch (difficulty) {
             case 0:
-                hp = maxHp;
                 scorefile = Application.streamingAssetsPath + "/easyscore";
                 using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
                     bestScore = int.Parse(reader.ReadLine());
@@ -66,7 +65,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case 1:
-                hp = maxHp / 2;
+                maxHp /= 2;
                 scorefile = Application.streamingAssetsPath + "/hardscore";
                 using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
                     bestScore = int.Parse(reader.ReadLine());
@@ -74,7 +73,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case 2:
-                hp = 1;
+                maxHp = 1;
                 scorefile = Application.streamingAssetsPath + "/owatascore";
                 using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
                     bestScore = int.Parse(reader.ReadLine());
@@ -86,6 +85,7 @@ public class PlayerController : MonoBehaviour
                 bestScore = 0;
                 break;
         }
+        hp = maxHp;
         bestScoreText.text = bestScore.ToString();
         score = 0;
     }
