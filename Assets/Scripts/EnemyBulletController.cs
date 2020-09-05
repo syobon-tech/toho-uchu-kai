@@ -21,7 +21,7 @@ public class EnemyBulletController : MonoBehaviour
     {
         transform.Translate(0,speed,0);
 
-        if (transform.position.y < -4.5 || transform.position.y > 4.5 || transform.position.x < -8 || transform.position.x > 0)
+        if (transform.position.y < -4.75 || transform.position.y > 4.75 || transform.position.x < -7.75 || transform.position.x > 0.75)
         {
             Destroy(gameObject);
         }

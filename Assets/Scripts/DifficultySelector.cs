@@ -38,9 +38,4 @@ public class DifficultySelector : MonoBehaviour
         difficulty = 2;
         SceneManager.LoadScene("Arcade");
     }
-
-    public void DataReset()
-    {
-        PlayerPrefs.DeleteAll();
-    }
 }

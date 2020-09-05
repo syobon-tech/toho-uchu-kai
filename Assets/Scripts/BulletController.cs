@@ -16,7 +16,7 @@ public class BulletController : MonoBehaviour
     {
         transform.Translate(0, speed, 0);
 
-        if (transform.position.y > 4.5) {
+        if (transform.position.y > 4.75) {
             Destroy(gameObject);
         }
     }

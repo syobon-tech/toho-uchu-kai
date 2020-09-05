@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public Text hpText;
     public Text enemyCountText;
     public Text levelText;
+    public Slider slider;
     float shotTimer;
     float scoreTimer;
 
@@ -52,20 +55,30 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         int difficulty = DifficultySelector.GetDifficulty();
+        string scorefile = "";
         switch (difficulty) {
             case 0:
                 hp = maxHp;
-                bestScore = PlayerPrefs.GetInt("easyBestScore", 0);
+                scorefile = Application.streamingAssetsPath + "/easyscore";
+                using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
+                    bestScore = int.Parse(reader.ReadLine());
+                }
                 break;
 
             case 1:
                 hp = maxHp / 2;
-                bestScore = PlayerPrefs.GetInt("hardBestScore", 0);
+                scorefile = Application.streamingAssetsPath + "/hardscore";
+                using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
+                    bestScore = int.Parse(reader.ReadLine());
+                }
                 break;
 
             case 2:
                 hp = 1;
-                bestScore = PlayerPrefs.GetInt("owataBestScore", 0);
+                scorefile = Application.streamingAssetsPath + "/owatascore";
+                using (StreamReader reader = new StreamReader(scorefile, Encoding.GetEncoding("UTF-8"))) {
+                    bestScore = int.Parse(reader.ReadLine());
+                }
                 break;
 
             default:
@@ -83,20 +96,20 @@ public class PlayerController : MonoBehaviour
         float inputUD = Input.GetAxisRaw("Vertical");
 
         // Moving
-        if (inputLR > 0 && transform.position.x < 0)
+        if (inputLR > 0 && transform.position.x < 0.75)
         {
             transform.Translate(0.1f, 0, 0);
         }
-        else if (inputLR < 0 && transform.position.x > -8)
+        else if (inputLR < 0 && transform.position.x > -7.75)
         {
             transform.Translate(-0.1f, 0, 0);
         }
 
-        if (inputUD > 0 && transform.position.y < 4.5)
+        if (inputUD > 0 && transform.position.y < 4.75)
         {
             transform.Translate(0, 0.1f, 0);
         }
-        else if (inputUD < 0 && transform.position.y > -4.5)
+        else if (inputUD < 0 && transform.position.y > -4.75)
         {
             transform.Translate(0, -0.1f, 0);
         }
@@ -141,7 +154,7 @@ public class PlayerController : MonoBehaviour
                 level = (int)Math.Floor(level_d) + 1;
                 break;
         }
-        levelText.text = "Level: " + ((int)Math.Floor(level_d) + 1).ToString();
+        levelText.text = ((int)Math.Floor(level_d) + 1).ToString();
 
         // Scoreing
         scoreTimer += Time.deltaTime;
@@ -152,6 +165,7 @@ public class PlayerController : MonoBehaviour
         scoreText.text = score.ToString();
 
         hpText.text = hp.ToString();
+        slider.value = (float)hp / (float)maxHp;
         GameObject[] tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCountText.text = (tagObjects.Length).ToString();
     }

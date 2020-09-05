@@ -18,8 +18,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -35,6 +33,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Arcade.unity:
@@ -65,6 +64,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12054}
     - Class: 114
+      Script: {instanceID: 12108}
+    - Class: 114
       Script: {instanceID: 12198}
     - Class: 114
       Script: {instanceID: 12796}
@@ -86,6 +87,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14426}
     - Class: 114
       Script: {instanceID: 15060}
+    - Class: 114
+      Script: {instanceID: 15106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,6 +197,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -238,6 +243,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -392,7 +401,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: e90a09ae3e3f5b50e91d06ea35095390
+      Hash: 0cef4e25f7f4f370b53f0fb0e5c72fbe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BestScoreSaver
@@ -536,7 +545,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 6adf23ff0ec3f83619d61611b40f27c3
+      Hash: 35632799ea5cd022a2e02d6beeda9dec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -816,4 +825,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SelectDifficulty.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/b1.0.3.1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/1.0-RC1/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
