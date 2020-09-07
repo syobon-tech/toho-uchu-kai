@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: -350}
+  m_AnchoredPosition: {x: -560, y: -350}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110883102
@@ -407,17 +407,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed918f6f5d23ae41aaa39e552afd5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 20
-  level: 0
   shotInterval: 0.1
   scoreWithTimeInterval: 0.5
+  maxHp: 20
+  level: 0
   bullet: {fileID: 9110482926101688021, guid: 4dd0a7690c53aec4dae34dc9efd8d004, type: 3}
   scoreText: {fileID: 1573197867}
   bestScoreText: {fileID: 178834201}
+  slider: {fileID: 799816894}
   hpText: {fileID: 94367544}
   enemyCountText: {fileID: 1212321883}
   levelText: {fileID: 1527719581}
-  slider: {fileID: 799816894}
 --- !u!212 &278012462
 SpriteRenderer:
   m_ObjectHideFlags: 0

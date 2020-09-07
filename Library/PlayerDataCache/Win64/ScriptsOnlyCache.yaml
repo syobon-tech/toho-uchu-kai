@@ -35,6 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
@@ -141,6 +142,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14938}
     - Class: 114
+      Script: {instanceID: 14952}
+    - Class: 114
       Script: {instanceID: 15060}
     - Class: 115
       Script: {instanceID: 0}
@@ -240,6 +243,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14426}
     - Class: 114
       Script: {instanceID: 14612}
+    - Class: 114
+      Script: {instanceID: 14952}
     - Class: 114
       Script: {instanceID: 15060}
     - Class: 115
@@ -551,7 +556,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 35632799ea5cd022a2e02d6beeda9dec
+      Hash: 2f09b37dec027e667cdeef387ce82eee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -831,4 +836,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SelectDifficulty.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/1.0-RC2/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/1.0-RC3/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
