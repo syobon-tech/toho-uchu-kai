@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 30
   fireInterval: 0.5
-  bullet: {fileID: 2199821807832936924, guid: fb2980f91ffddea4ba1c7bcd73422e92, type: 3}
+  bullet_a: {fileID: 2199821807832936924, guid: fb2980f91ffddea4ba1c7bcd73422e92,
+    type: 3}
+  bullet_b: {fileID: 8737566443764135849, guid: cd4fa7b8ea6712044ada24c17d4b083e,
+    type: 3}
   point: {fileID: 837489607482687037, guid: 7ea81351a6f72e94d82e7e547cdd5921, type: 3}
-  player: {fileID: 0}
 --- !u!1001 &1285093256570567154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24,6 +26,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5187332497480954430, guid: 90931f7417dfe2f49a110322986d39e5,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387878434973376032, guid: 90931f7417dfe2f49a110322986d39e5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de06ef6cd50494442816e8f20c52addf,
+        type: 3}
     - target: {fileID: 8387878434973376033, guid: 90931f7417dfe2f49a110322986d39e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -78,6 +91,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387878434973376033, guid: 90931f7417dfe2f49a110322986d39e5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387878434973376033, guid: 90931f7417dfe2f49a110322986d39e5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 8387878434973376062, guid: 90931f7417dfe2f49a110322986d39e5,
         type: 3}

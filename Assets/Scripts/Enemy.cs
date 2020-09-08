@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public int maxHp;
     public float fireInterval;
-    public GameObject bullet;
+    public GameObject bullet_a;
+    public GameObject bullet_b;
     public GameObject point;
     protected GameObject player;
     PlayerController script;
@@ -33,7 +34,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         script = player.GetComponent<PlayerController>();
         int level = script.level;
-        fireInterval *= (float)Math.Sqrt(level + 4) / 2;
+        fireInterval *= (float)Math.Sqrt(Math.Sqrt(level + 4) / 2);
     }
 
     // Update is called once per frame
@@ -49,14 +50,14 @@ public class Enemy : MonoBehaviour
 
         Vector3 vector = (player.transform.position - transform.position).normalized;
         vector.z = 0;
-        Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, vector));
+        Instantiate(bullet_a, transform.position, Quaternion.FromToRotation(Vector3.up, vector));
     }
 
     protected float angle;
     void Fire_b() {
         float rotation = 0;
         while (rotation <= 360) {
-            Instantiate(bullet, transform.position, Quaternion.AngleAxis(rotation, Vector3.forward));
+            Instantiate(bullet_b, transform.position, Quaternion.AngleAxis(rotation, Vector3.forward));
             rotation += angle;
         }
     }

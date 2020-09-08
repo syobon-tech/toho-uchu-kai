@@ -478,7 +478,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 50ea77b6de2213783c67821aa16a6fe6
+      Hash: 2a6ec034242c3634610f6d3cb1c47653
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy_a
@@ -538,13 +538,13 @@ ScriptsOnlyBuild:
     className: DifficultySelector
   - hash:
       serializedVersion: 2
-      Hash: 50ea77b6de2213783c67821aa16a6fe6
+      Hash: 2a6ec034242c3634610f6d3cb1c47653
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy_b
   - hash:
       serializedVersion: 2
-      Hash: 50ea77b6de2213783c67821aa16a6fe6
+      Hash: 2a6ec034242c3634610f6d3cb1c47653
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -836,4 +836,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SelectDifficulty.unity
   - Assets/Scenes/Arcade.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: "F:/toho-uchu-kai/Bin/1.0-RC3/\u6771\u65B9\u5B87\u5B99\u58CA.exe"
+  playerPath: "F:/toho-uchu-kai/Bin/1.0/\u6771\u65B9\u5B87\u5B99\u58CA.exe"

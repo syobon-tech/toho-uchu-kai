@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour
         InvokeRepeating("GenerateEnemy", 1, generateEnemyInterval);
         script = player.GetComponent<PlayerController>();
         int level_saved = script.level;
+        UnityEngine.Random.InitState((DateTime.Now).Millisecond);
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class GameMaster : MonoBehaviour
     }
 
     void GenerateEnemy() {
-        Vector3 enemyPosition = new Vector3(UnityEngine.Random.Range(-7.75f,0.75f), 2.0f, 3.0f);
+        Vector3 enemyPosition = new Vector3(UnityEngine.Random.Range(-7.75f,0.75f), UnityEngine.Random.Range(3f,2f), 3.0f);
         UnityEngine.Random.InitState((DateTime.Now).Millisecond);
         if (UnityEngine.Random.Range(0, 21) <= 10) {
             Instantiate(enemy_a, enemyPosition, Quaternion.identity);
