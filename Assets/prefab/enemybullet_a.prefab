@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -643707205794269461}
   - component: {fileID: -5198457397455468083}
   m_Layer: 0
-  m_Name: enemybullet
+  m_Name: enemybullet_a
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,9 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38f3bd4b0bbbbf48a2dbe6ae724dcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorSprite: {fileID: 5515354716254508465, guid: 6efff80d4ede31b48a14101ee5ac82bd,
-    type: 3}
-  speed: 0.1
+  speed: 0.075
 --- !u!58 &-643707205794269461
 CircleCollider2D:
   m_ObjectHideFlags: 0

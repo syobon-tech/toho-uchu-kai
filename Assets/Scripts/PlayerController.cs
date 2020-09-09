@@ -107,38 +107,40 @@ public class PlayerController : MonoBehaviour
         // 入力を取得
         float inputLR = Input.GetAxisRaw("Horizontal");
         float inputUD = Input.GetAxisRaw("Vertical");
+        float inputSlow = Input.GetAxisRaw("Fire3");
 
+        float speed;
+        if (inputSlow == 0)
+        {
+            speed = 0.1f;
+        } else
+        {
+            speed = 0.05f;
+        }
         // 移動
         if (inputLR > 0 && transform.position.x < 0.75)
         {
-            transform.Translate(0.1f, 0, 0); // 右
+            transform.Translate(speed, 0, 0); // 右
         }
         else if (inputLR < 0 && transform.position.x > -7.75)
         {
-            transform.Translate(-0.1f, 0, 0); // 左
+            transform.Translate(-speed, 0, 0); // 左
         }
 
         if (inputUD > 0 && transform.position.y < 4.75)
         {
-            transform.Translate(0, 0.1f, 0); // 下
+            transform.Translate(0, speed, 0); // 下
         }
         else if (inputUD < 0 && transform.position.y > -4.75)
         {
-            transform.Translate(0, -0.1f, 0); // 上
+            transform.Translate(0, -speed, 0); // 上
         }
 
         // 弾発射
         if (Input.GetAxisRaw("Fire1") == 1) {
             // 発射
             if (shotTimer == 0) {
-                Vector3 bulletPosition = transform.position;
-                bulletPosition.y += 0.5f;
-                Instantiate(bullet, bulletPosition, Quaternion.identity);
-                bulletPosition.y -= 0.2f;
-                bulletPosition.x -= 0.5f;
-                Instantiate(bullet, bulletPosition, Quaternion.identity);
-                bulletPosition.x += 1f;
-                Instantiate(bullet, bulletPosition, Quaternion.identity);
+                Fire();
             }
 
             // 発射からの時間加算
@@ -187,6 +189,21 @@ public class PlayerController : MonoBehaviour
         slider.value = (float)hp / (float)maxHp;    // HP表示 (バー)
         GameObject[] tagObjects = GameObject.FindGameObjectsWithTag("Enemy");   // 敵の数のカウント
         enemyCountText.text = (tagObjects.Length).ToString();                   // 敵の数を表示
+    }
+
+    void Fire() {
+        Vector3 bulletPosition = transform.position;
+        bulletPosition.y += 0.5f;
+        Instantiate(bullet, bulletPosition, Quaternion.identity);
+        bulletPosition.y -= 0.2f;
+        bulletPosition.x -= 0.5f;
+        if (bulletPosition.x > -8) {
+            Instantiate(bullet, bulletPosition, Quaternion.identity);
+        }
+        bulletPosition.x += 1f;
+        if (bulletPosition.x < 1) {
+            Instantiate(bullet, bulletPosition, Quaternion.identity);
+        }
     }
 
     // 当たり判定

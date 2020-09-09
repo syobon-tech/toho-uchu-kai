@@ -40,8 +40,7 @@ public class GameMaster : MonoBehaviour
     }
 
     void GenerateEnemy() {
-        Vector3 enemyPosition = new Vector3(UnityEngine.Random.Range(-7.75f,0.75f), UnityEngine.Random.Range(3f,2f), 3.0f);
-        UnityEngine.Random.InitState((DateTime.Now).Millisecond);
+        Vector3 enemyPosition = new Vector3(UnityEngine.Random.Range(-7.75f,0.75f), UnityEngine.Random.Range(4f,1f), 3.0f);
         if (UnityEngine.Random.Range(0, 21) <= 10) {
             Instantiate(enemy_a, enemyPosition, Quaternion.identity);
         }else {

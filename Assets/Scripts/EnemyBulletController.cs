@@ -13,7 +13,6 @@ public class EnemyBulletController : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         PlayerController script = player.GetComponent<PlayerController>();
         int level = script.level;
-        speed /= (float)Math.Sqrt(Math.Sqrt(level));
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class EnemyBulletController : MonoBehaviour
     {
         transform.Translate(0,speed,0);
 
-        if (transform.position.y < -4.75 || transform.position.y > 4.75 || transform.position.x < -7.75 || transform.position.x > 0.75)
+        if (transform.position.y < -5 || transform.position.y > 5 || transform.position.x < -8 || transform.position.x > 1)
         {
             Destroy(gameObject);
         }

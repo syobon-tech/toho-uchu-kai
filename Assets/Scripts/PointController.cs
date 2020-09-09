@@ -33,7 +33,7 @@ public class PointController : MonoBehaviour
                 }
             }
         }
-        if (transform.position.y < -4.5)
+        if (transform.position.y < -5)
         {
             Destroy(gameObject);
         }
